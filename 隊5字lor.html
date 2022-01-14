@@ -10,7 +10,7 @@
 				--colorA: rgb(0, 255, 221);
 				--colorB: rgb(255, 0, 170);
 				--colorC: rgb(255, 255, 0);
-				--colorD: rgb(255, 0, 76);
+				--colorD: rgb(255, 0, 0);
 			}
 
 			html,
@@ -23,12 +23,19 @@
 				margin: 0;
 			}
 
-			div {
+			.flex-container {
 				height: inherit;
 				width: inherit;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+			}
+
+			.wrapper {
+				height: 100%;
+				width: 60vw;
+				display: flex;
+				justify-content: center;
 			}
 
 			@keyframes slide {
@@ -55,35 +62,37 @@
 
 			#a {
 				top: 45vh;
-				left: 35%;
 				animation-delay: -1s;
 			}
 
 			#b {
 				top: calc(45vh - 20px);
-				left: calc(35% - 5px);
+
 				animation-delay: -2.5s;
 			}
 
 			#c {
 				top: calc(45vh - 40px);
-				left: calc(35% - 10px);
+
 				animation-delay: -4s;
 			}
 
 			#d {
+				color: rgba(0, 0, 0, 0.5);
 				top: calc(45vh - 60px);
-				left: calc(35% - 15px);
+
 				animation-delay: -5.5s;
 			}
 		</style>
 	</head>
 	<body>
-		<div>
-			<span id="a">隊5字lor</span>
-			<span id="b">隊5字lor</span>
-			<span id="c">隊5字lor</span>
-			<span id="d">隊5字lor</span>
+		<div class="flex-container">
+			<div class="wrapper">
+				<span id="a">隊5字lor</span>
+				<span id="b">隊5字lor</span>
+				<span id="c">隊5字lor</span>
+				<span id="d">隊5字lor</span>
+			</div>
 		</div>
 	</body>
 </html>
