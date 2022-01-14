@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>晴子小姐</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Noto+Sans+HK:wght@300&display=swap" rel="stylesheet" />
+		<style>
+			:root {
+				--colorA: rgb(0, 255, 221);
+				--colorB: rgb(255, 0, 170);
+				--colorC: rgb(255, 255, 0);
+				--colorD: rgb(255, 0, 0);
+				--colorE: rgb(0, 89, 255);
+			}
+
+			html,
+			body {
+				height: 100vh;
+				height: -webkit-fill-available;
+				background-color: #333;
+				color: #333;
+				font-family: 'Noto Sans HK', sans-serif;
+				margin: 0;
+			}
+
+			.flex-container {
+				height: inherit;
+				width: inherit;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wrapper {
+				height: 100%;
+				width: 60vw;
+				display: flex;
+				justify-content: center;
+			}
+
+			@keyframes slide {
+				0% {
+					text-shadow: -2px -2px 0 var(--colorA), 2px -2px 0 var(--colorA), -2px 2px 0 var(--colorA), 2px 2px 0 var(--colorA);
+				}
+				20% {
+					text-shadow: -2px -2px 0 var(--colorB), 2px -2px 0 var(--colorB), -2px 2px 0 var(--colorB), 2px 2px 0 var(--colorB);
+				}
+				40% {
+					text-shadow: -2px -2px 0 var(--colorC), 2px -2px 0 var(--colorC), -2px 2px 0 var(--colorC), 2px 2px 0 var(--colorC);
+				}
+				60% {
+					text-shadow: -2px -2px 0 var(--colorD), 2px -2px 0 var(--colorD), -2px 2px 0 var(--colorD), 2px 2px 0 var(--colorD);
+				}
+				80% {
+					text-shadow: -2px -2px 0 var(--colorE), 2px -2px 0 var(--colorE), -2px 2px 0 var(--colorE), 2px 2px 0 var(--colorE);
+				}
+				100% {
+					text-shadow: -2px -2px 0 var(--colorA), 2px -2px 0 var(--colorA), -2px 2px 0 var(--colorA), 2px 2px 0 var(--colorA);
+				}
+			}
+
+			span {
+				position: absolute;
+				font-size: 160px;
+				transform: rotateX(60deg) rotateY(-10deg) rotateZ(30deg);
+				animation: slide 2.5s linear alternate infinite;
+			}
+
+			#a {
+				top: 45vh;
+				animation-delay: -1s;
+			}
+
+			#b {
+				top: calc(45vh - 20px);
+				animation-delay: -2.5s;
+			}
+
+			#c {
+				top: calc(45vh - 40px);
+				animation-delay: -4s;
+			}
+
+			#d {
+				color: rgba(0, 0, 0, 0.5);
+				top: calc(45vh - 60px);
+				animation-delay: -5.5s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="wrapper">
+				<span id="a">晴 子 小 姐</span>
+				<span id="b">晴 子 小 姐</span>
+				<span id="c">晴 子 小 姐</span>
+				<span id="d">晴 子 小 姐</span>
+			</div>
+		</div>
+	</body>
+</html>
